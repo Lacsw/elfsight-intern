@@ -1,0 +1,33 @@
+.more-cards {
+  margin: 10px auto 50px;
+
+  &__counter {
+    margin: 0;
+    margin-bottom: 10px;
+  }
+
+  &__btn {
+    color: #000;
+    border: 2px solid;
+    margin: 0 30px;
+    padding: 16px 100px;
+    transition: 0.25s;
+    box-shadow: 0.3em 0.3em 0 0 #000;
+    cursor: pointer;
+    border-radius: 12px;
+
+    line-height: 1;
+    font-weight: bold;
+    font-size: 32px;
+
+    &:hover {
+      box-shadow: 0 0 0 0 #000;
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+    &__btn {
+      min-width: 240px;
+    }
+  }
+}
