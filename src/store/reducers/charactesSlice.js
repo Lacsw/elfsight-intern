@@ -16,7 +16,11 @@ const initialState = {
 export const charactesSlice = createSlice({
   name: 'characters',
   initialState,
-  reducers: {},
+  reducers: {
+    setSearch: (state, action) => {
+      state.characters = action.payload;
+    },
+  },
   extraReducers: (builder) => {
     builder.addCase(fetchCharacters.fulfilled, (state, action) => {
       state.characters = action.payload;
@@ -24,7 +28,6 @@ export const charactesSlice = createSlice({
   },
 });
 
-// Action creators are generated for each case reducer function
-// export const { fetchCharacters } = charactesSlice.actions;
+export const { setSearch } = charactesSlice.actions;
 
 export default charactesSlice.reducer;

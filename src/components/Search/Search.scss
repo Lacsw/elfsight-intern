@@ -1,0 +1,21 @@
+.search {
+  display: flex;
+  margin: 0 auto;
+  width: 30%;
+
+  &__input {
+    width: 100%;
+    height: 30px;
+    outline: none;
+    font-size: 18px;
+    font-family: 'JetBrains Mono', sans-serif;
+    line-height: 1.5;
+  }
+
+  &__btn {
+    font-size: 18px;
+    font-family: 'JetBrains Mono', sans-serif;
+    line-height: 1.5;
+    cursor: pointer;
+  }
+}

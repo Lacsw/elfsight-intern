@@ -8,7 +8,7 @@ const MoreCards = () => {
   const dispatch = useDispatch();
   const characters = useSelector((state) => state.characters);
   const charInfo = characters.characters.info;
-  const [pageNum, setPageNum] = useState(1|| null);
+  const [pageNum, setPageNum] = useState(1 || null);
 
   const handleNextBtnClick = () => {
     dispatch(fetchCharacters(charInfo.next));
@@ -22,9 +22,12 @@ const MoreCards = () => {
 
   return (
     <section className='more-cards'>
-      <p className='more-cards__counter'>
-        {pageNum} / {42}
-      </p>
+      {charInfo.pages !== 1 && (
+        <p className='more-cards__counter'>
+          {pageNum} / {charInfo.pages}
+        </p>
+      )}
+
       {charInfo.prev && (
         <button className='more-cards__btn' onClick={handlePrevBtnClick}>
           Prev

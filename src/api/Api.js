@@ -19,6 +19,14 @@ class Api {
     });
     return this._checkResponse(response);
   }
+
+  async fliter(search = '') {
+    const response = await fetch(`${this._baseUrl}/character/?name=${search}`, {
+      method: 'GET',
+      headers: this._headers,
+    });
+    return this._checkResponse(response);
+  }
 }
 
 const api = new Api({
