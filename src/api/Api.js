@@ -13,18 +13,21 @@ class Api {
   }
 
   async getCharacters(page = `${this._baseUrl}/character`) {
-    const response = await fetch(page, {
+    const response = await fetch(`${page}`, {
       method: 'GET',
       headers: this._headers,
     });
     return this._checkResponse(response);
   }
 
-  async fliter(search = '') {
-    const response = await fetch(`${this._baseUrl}/character/?name=${search}`, {
-      method: 'GET',
-      headers: this._headers,
-    });
+  async fliter({ name, status, gender, species }) {
+    const response = await fetch(
+      `${this._baseUrl}/character/?name=${name}&status=${status}&gender=${gender}&species=${species}`,
+      {
+        method: 'GET',
+        headers: this._headers,
+      }
+    );
     return this._checkResponse(response);
   }
 }

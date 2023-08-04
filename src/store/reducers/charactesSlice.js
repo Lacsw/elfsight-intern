@@ -3,8 +3,8 @@ import api from '../../api/Api';
 
 export const fetchCharacters = createAsyncThunk(
   'characters/fetchCharacters',
-  async (page) => {
-    const response = await api.getCharacters(page);
+  async (page, filters) => {
+    const response = await api.getCharacters(page, filters);
     return response;
   }
 );
@@ -28,6 +28,6 @@ export const charactesSlice = createSlice({
   },
 });
 
-export const { setSearch } = charactesSlice.actions;
+export const { setSearch, setFilterName } = charactesSlice.actions;
 
 export default charactesSlice.reducer;

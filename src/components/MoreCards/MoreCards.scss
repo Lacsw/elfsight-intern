@@ -1,5 +1,6 @@
 .more-cards {
   margin: 10px auto 50px;
+  align-self: center;
 
   &__counter {
     margin: 0;
@@ -9,12 +10,11 @@
   &__btn {
     color: #000;
     border: 2px solid;
-    margin: 0 30px;
+    margin: 10px 30px;
     padding: 16px 100px;
     transition: 0.25s;
     box-shadow: 0.3em 0.3em 0 0 #000;
     cursor: pointer;
-    border-radius: 12px;
 
     line-height: 1;
     font-weight: bold;

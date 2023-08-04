@@ -1,6 +1,6 @@
 .card {
   width: 190px;
-  border-radius: 12px;
+  height: 310px;
   overflow: hidden;
   border: 1px solid;
   box-shadow: 10px 10px 0 0 #000;
@@ -36,7 +36,6 @@
     align-items: center;
     font-size: 12px;
     text-align: left;
-
 
     &-icon {
       height: 8px;
