@@ -11,6 +11,7 @@ export const fetchCharacters = createAsyncThunk(
 
 const initialState = {
   characters: [],
+  selectedCharacter: '',
 };
 
 export const charactesSlice = createSlice({
@@ -20,6 +21,9 @@ export const charactesSlice = createSlice({
     setSearch: (state, action) => {
       state.characters = action.payload;
     },
+    setSelectedCharacter: (state, action) => {
+      state.selectedCharacter = action.payload;
+    },
   },
   extraReducers: (builder) => {
     builder.addCase(fetchCharacters.fulfilled, (state, action) => {
@@ -28,6 +32,7 @@ export const charactesSlice = createSlice({
   },
 });
 
-export const { setSearch, setFilterName } = charactesSlice.actions;
+export const { setSearch, setFilterName, setSelectedCharacter } =
+  charactesSlice.actions;
 
 export default charactesSlice.reducer;
